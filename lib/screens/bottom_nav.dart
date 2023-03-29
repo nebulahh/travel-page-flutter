@@ -2,7 +2,6 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:travelappdribbble/screens/home_page.dart';
-// import 'package:ticket_booking_tutorial/screens/home_page.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
