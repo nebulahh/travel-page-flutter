@@ -16,9 +16,10 @@ class HomePageExploreSection extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) => DestinationDetailsPage(
-                    destination: trips,
-                  )),
+            builder: (context) => DestinationDetailsPage(
+              destination: trips,
+            ),
+          ),
         );
       },
       child: Material(
@@ -26,13 +27,12 @@ class HomePageExploreSection extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         child: Container(
           width: size.width * 0.44,
-          height: 170,
+          height: 200,
           padding: const EdgeInsets.symmetric(
             horizontal: 7,
             vertical: 7,
           ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Stack(
                 alignment: const Alignment(0.8, -0.9),

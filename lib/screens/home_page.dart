@@ -10,9 +10,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // final size = AppLayout.getSize(context);
     return Scaffold(
       body: ListView(
         children: [
+          const Gap(10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -44,7 +46,7 @@ class HomePage extends StatelessWidget {
                   const Icon(Icons.circle_notifications),
                 ],
               ),
-              const Gap(30),
+              const Gap(35),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
@@ -58,7 +60,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              const Gap(25),
+              const Gap(30),
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
@@ -115,7 +117,7 @@ class HomePage extends StatelessWidget {
                       .toList(),
                 ),
               ),
-              const Gap(15),
+              const Gap(30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -155,7 +157,7 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
-              const Gap(15),
+              const Gap(20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: trips
