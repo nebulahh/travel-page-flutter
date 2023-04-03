@@ -2,6 +2,8 @@
 
 A new Flutter project.
 
+<img src="assets/images/travel-app.gif" />
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
