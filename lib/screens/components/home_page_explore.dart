@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:travelappdribbble/screens/destination_details_page.dart';
 import 'package:travelappdribbble/constants/app_layout.dart';
+import 'dart:ui' as ui;
 
 class HomePageExploreSection extends StatelessWidget {
   final Map<String, dynamic> trips;
@@ -51,15 +52,29 @@ class HomePageExploreSection extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.all(3.0),
+                    padding: const EdgeInsets.all(3.5),
                     decoration: BoxDecoration(
-                      color: Colors.black45,
+                      color: Colors.grey.shade200.withOpacity(0.5),
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    child: Text(
-                      "\$${trips['price']}",
-                      style: const TextStyle(
-                        color: Colors.white,
+                    child: SizedBox(
+                      width: 30,
+                      child: Row(
+                        children: [
+                          const Text(
+                            "\$",
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            "${trips['price']}",
+                            style: const TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),

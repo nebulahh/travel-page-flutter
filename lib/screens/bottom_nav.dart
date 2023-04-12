@@ -2,6 +2,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:travelappdribbble/screens/home_page.dart';
+import 'dart:ui' as ui;
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
@@ -49,26 +50,90 @@ class _BottomNavState extends State<BottomNav> {
             selectedItemColor: Colors.white,
             type: BottomNavigationBarType.fixed,
             unselectedItemColor: Colors.white,
-            items: const [
+            items: [
               BottomNavigationBarItem(
                 label: 'Home',
-                icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
-                activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
+                icon: Container(
+                  padding: const EdgeInsets.all(5),
+                  child: const Icon(FluentSystemIcons.ic_fluent_home_regular),
+                ),
+                activeIcon: ClipRect(
+                  child: BackdropFilter(
+                    filter: ui.ImageFilter.blur(sigmaX: 0, sigmaY: 0),
+                    child: Container(
+                      padding: const EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                          color: Colors.grey.shade200.withOpacity(0.35),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20))),
+                      child:
+                          const Icon(FluentSystemIcons.ic_fluent_home_filled),
+                    ),
+                  ),
+                ),
               ),
               BottomNavigationBarItem(
                 label: 'explore',
-                icon: Icon(FluentIcons.compass_northwest_20_regular),
-                activeIcon: Icon(FluentIcons.compass_northwest_20_filled),
+                icon: Container(
+                  padding: const EdgeInsets.all(5),
+                  child: const Icon(FluentIcons.compass_northwest_20_regular),
+                ),
+                activeIcon: ClipRect(
+                  child: BackdropFilter(
+                    filter: ui.ImageFilter.blur(sigmaX: 0, sigmaY: 0),
+                    child: Container(
+                        padding: const EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          color: Colors.grey.shade200.withOpacity(0.35),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20)),
+                        ),
+                        child: const Icon(
+                            FluentIcons.compass_northwest_20_filled)),
+                  ),
+                ),
               ),
               BottomNavigationBarItem(
                 label: 'Ticket',
-                icon: Icon(FluentSystemIcons.ic_fluent_heart_regular),
-                activeIcon: Icon(FluentSystemIcons.ic_fluent_heart_filled),
+                icon: Container(
+                  padding: const EdgeInsets.all(5),
+                  child: const Icon(FluentSystemIcons.ic_fluent_heart_regular),
+                ),
+                activeIcon: ClipRect(
+                  child: BackdropFilter(
+                    filter: ui.ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+                    child: Container(
+                        padding: const EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          color: Colors.grey.shade200.withOpacity(0.35),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20)),
+                        ),
+                        child: const Icon(
+                            FluentSystemIcons.ic_fluent_heart_filled)),
+                  ),
+                ),
               ),
               BottomNavigationBarItem(
                   label: 'Profile',
-                  icon: Icon(FluentSystemIcons.ic_fluent_person_regular),
-                  activeIcon: Icon(FluentSystemIcons.ic_fluent_person_filled)),
+                  icon: Container(
+                      padding: const EdgeInsets.all(5),
+                      child: const Icon(
+                          FluentSystemIcons.ic_fluent_person_regular)),
+                  activeIcon: ClipRect(
+                    child: BackdropFilter(
+                      filter: ui.ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+                      child: Container(
+                          padding: const EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                            color: Colors.grey.shade200.withOpacity(0.35),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(20)),
+                          ),
+                          child: const Icon(
+                              FluentSystemIcons.ic_fluent_person_filled)),
+                    ),
+                  )),
             ],
           ),
         ),

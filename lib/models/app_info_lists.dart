@@ -26,7 +26,7 @@ List<Map<String, dynamic>> trips = [
     'duration': 5,
     'ratings': 4.7,
     'details':
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
     'image': 'assets/images/lake.jpg',
@@ -40,6 +40,6 @@ List<Map<String, dynamic>> trips = [
     'duration': 2,
     'ratings': 4.8,
     'details':
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   }
 ];
